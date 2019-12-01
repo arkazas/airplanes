@@ -70,16 +70,16 @@ services:
     - backend-network
     - frontend-network
 
-#  &node-service node:
-#    <<: *app-service-template
-#    image: tarampampam/node:10.10-alpine
-#    restart: on-failure
-#    hostname: *node-service
-#    working_dir: /app
-#    command: []
-#    depends_on: []
-#    networks:
-#    - frontend-network
+  &node-service node:
+    <<: *app-service-template
+    image: tarampampam/node:10.10-alpine
+    restart: on-failure
+    hostname: *node-service
+    working_dir: /app
+    command: []
+    depends_on: []
+    networks:
+    - frontend-network
 
   nginx:
     image: registry.gitlab.com/tarampampam/laravel-in-docker/nginx:latest
