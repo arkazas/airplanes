@@ -32,3 +32,13 @@ Just execute into your terminal next commands:
 $ git clone https://github.com/arkazas/airplanes.git ./airplanes && cd $_
 $ make init
 ```
+
+### First part of the task
+Is located at the ./src/app/TaskOne directory
+
+### Second part of the task
+API endpoints described in the ./src/routes/api.php
+
+Endpoints list:
+- GET 127.0.0.1:9999/api/v1/hangars - get list of hangars
+- GET 127.0.0.1:9999/api/v1/hangars/{hangar}/airplanes - get list of airplaines that located at the selected hangar, where {hangar} is UUID of the hangar
